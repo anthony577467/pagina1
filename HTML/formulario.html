@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="/CSS/formuaro.ss">
+    
+</head>
+<li class="nav__items">
+    <a href="/index.html" class="nav__links">INICIO</a>
+</li>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: url('image/2.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0; /* Asegura que no haya márgenes en el cuerpo de la página */
+}
+
+form {
+    background: rgba(200, 200, 200, 0.7);
+    width: 80%; /* Cambiado a un ancho relativo */
+    max-width: 400px; /* Ancho máximo para evitar que el formulario sea demasiado ancho en pantallas grandes */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div img {
+    max-width: 100%;
+    height: auto; /* Hace que la imagen sea responsive */
+    float: left;
+    margin-right: 20px;
+}
+
+p {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+/* Estilo de botón para los elementos de navegación */
+.nav__links {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    background-color: #008080; /* Color de fondo del botón */
+    color: white; /* Color del texto en el botón */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background-color 0.3s ease; /* Efecto de transición suave en el cambio de color de fondo */
+
+}
+
+/* Cambio de color de fondo al pasar el ratón sobre el botón */
+.nav__links:hover {
+    background-color: #006666; /* Cambia el color al pasar el ratón */
+}
+
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+}
+
+a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+a:hover {
+    color: #004e9a;
+}
+
+#image-container {
+    float: left;
+    margin-right: 20px;
+}
+
+/* Regla de medios para hacer ajustes adicionales en pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+    form {
+        width: 90%; /* Ancho relativo para pantallas más pequeñas */
+    }
+}
+
+</style>
+<body>
+    <div style="float: left;">
+        <div class="logo-container">
+            <img src="/image/Logo-VG_Tpt02.png" alt="Logo">
+            <h2 class="logo-text">IEP SAN BENITO</h2>
+        </div>
+         
+    </div>
+    <form action="/enviarDatos" method="POST">
+
+        <h1>BIENVENIDOS</h1>
+        <p>Selecciona el Grado Academico:</p>
+        <input type="radio" name="carrera" value="Primaria"> Primaria
+        <input type="radio" name="carrera" value="Secundaria"> Secundaria
+
+        <p>Nombres:</p>
+        <input type="text" name="nombre" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+
+        <p>Apellidos:</p>
+        <input type="text" name="apellidos" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+
+        <p>Correo:</p>
+        <input type="email" name="correo" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese una dirección de correo electrónico válida">
+
+
+        <p>Asunto:</p>
+        <input type="text" name="Asunto" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+
+        <p>Fecha:</p>
+        <input type="time" name="Fecha" required>
+
+        <p>Telefono:</p>
+        <input type="number" name="Telefono" required pattern="[0-9]+" title="Ingrese solo números">
+
+
+        <p>Estado:</p>
+        <input type="text" name="Estado" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+
+        <p>Nombre de Estudiante:</p>
+        <input type="text" name="Nombre de Estudiante" required >
+
+        <p>Apellido de Estudiante:</p>
+        <input type="text" name="Apellido de Estudiante" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+
+        <p>Seccion:</p>
+        <input type="text" name="Seccion" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+
+        
+
+
+        <!-- <p><a href="olvidar_contrasena.php">¿Olvidaste tu contraseña?</a></p> 
+
+        <input type="checkbox" name="politica_privacidad" required> Aceptar la política de privacidad y Términos y Condiciones -->
+
+        <br><br>
+        <button type="submit" style="background-color: red;">ENVIAR FORMUALRIO</button>
+        
+    </form>
+
+    <script src="js/formulario.js"></script>
+
+    
+</body>
+</html>
+    
+    
+

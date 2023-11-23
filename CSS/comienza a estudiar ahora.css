@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px; /* Tamaño de fuente de 40px */
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
+}
+h2 {
+    font-size: 40px; 
+    color: white;
+    font-weight: bold; 
+    font-style: italic; 
+}
+
+
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 10px; /* Espacio entre imágenes */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+section {
+    border: 5px solid rgb(153, 12, 158);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.primaria {
+    background-color: rgba(247, 220, 111, 0.7); /* 0.7 representa la opacidad (0 a 1) */
+    margin-bottom: 20px;
+}
+
+.secundaria {
+    background-color: rgba(130, 224, 170, 0.7); /* 0.7 representa la opacidad (0 a 1) */
+}
+
+
+.rombo {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url('image/stars_-_43027\ \(540p\).mp4') no-repeat center center fixed;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+video {
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+  
+  
+  
+

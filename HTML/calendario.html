@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEP san benito cañete</title>
+  <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/CSS/normalizar.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="/CSS/calendar.css">
+  <meta name="theme-color" content="#2091F9">
+
+  <meta name="title" content="Bienvenidos a Sanbenito ">
+  <meta name="description" content="San benito es un colegio estatal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="Aqui te enseñamos todo lo que debas saber">
+  <meta property="og:description" content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+  <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.jordanalex.com/">
+  <meta property="twitter:description" content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google">
+</head>
+<DIV>
+</DIV>
+<h1>Calendario Cívico</h1>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(0, 70, 128);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    position: relative;
+}
+
+.imagen-de-fondo {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    z-index: 1;
+}
+
+#fechas-lista {
+    margin: 20px;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+li strong {
+    font-weight: bold;
+    color: #ff6347;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    li {
+        padding: 5px; /* Ajusta el espacio entre elementos de la lista */
+    }
+}
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para pantallas pequeñas */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos específicos para pantallas medianas */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Estilos específicos para pantallas grandes */
+}
+
+</style>
+
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <h2 class="nav__title">IEP SAN BENITO CAÑETE</h2>
+      </div>
+
+      <ul class="nav__link nav__link--menu">
+        <li class="nav__items">
+          <a href="/index.html" class="nav__links">INICIO</a>
+        </li>
+        <li class="nav__items">
+          <a href="/HTML/nosotrosSomos.html" class="nav__links">NOSOTROS SOMOS</a>
+        </li>
+        <li class="nav__items">
+          <a href="/HTML/ubicacion.html" class="nav__links">UBICACION</a>
+        </li>
+        <li class="nav__items">
+          <a href="/HTML/historia.html" class="nav__links">HISTORIA</a>
+        </li>
+        <li class="nav__items">
+          <a href="/HTML/calendario.html" class="nav__links">CALENDARIO</a>
+        </li>
+        <li class="nav__items">
+          <a href="/HTML/formulario.html" class="nav__links">CONTACTANOS</a>
+        </li>
+        <img src="/image/close.svg" class="nav__close">
+      </ul>
+
+      <div class="nav__menu">
+          <img src="/image/menu.svg" class="nav__img">
+      </div>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    <!-- Imagen 1 -->
+   
+    <!-- Contenido centrado -->
+    <div style="text-align: center;">
+      <h1></h1>
+      
+
+      <!-- Imagen 2 para las fechas cívicas -->
+      
+
+      <div id="fechas-lista">
+        <!-- Aquí se mostrarán las fechas cívicas -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function cargarFechasCivicasHoy() {
+      const response = await fetch('/api/fechas-civicas-hoy');
+      const fechas = await response.json();
+
+      const fechasLista = document.getElementById('fechas-lista');
+      fechasLista.innerHTML = '<h2>Fechas Cívicas de Hoy</h2>';
+
+      if (fechas.length === 0) {
+        fechasLista.innerHTML += '<p>No hay fechas cívicas para hoy.</p>';
+      } else {
+        fechasLista.innerHTML += '<ul>';
+        fechas.forEach((fecha) => {
+          fechasLista.innerHTML += `<li>${fecha.namecal} - ${fecha.desccal} - ${fecha.datecal}</li>`;
+        });
+        fechasLista.innerHTML += '</ul>';
+      }
+    }
+
+    cargarFechasCivicasHoy();
+  </script>
+</body>
+
+</html>

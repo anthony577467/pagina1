@@ -1,0 +1,40 @@
+
+  
+  .carousel-container {
+    position: relative;
+    width: 100%; /* Cambiado a 100% para ocupar todo el ancho de la pantalla */
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .carousel-item {
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción original */
+    box-sizing: border-box;
+    object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #prevButton {
+    left: 0;
+  }
+  
+  #nextButton {
+    right: 0;
+  }
+  

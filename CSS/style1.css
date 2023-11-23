@@ -1,0 +1,114 @@
+/* Estilos para el fondo con rayo diagonal y desvanecimiento en un lado */
+body {
+    background: linear-gradient(135deg, transparent 0%, blue 50%, blue 100%);
+    background-size: 100% 300%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto; /* Habilita el desplazamiento vertical */
+}
+
+a {
+    cursor: pointer;
+}
+
+/* Estilos para centrar el título */
+h1 {
+    text-align: center;
+}
+
+/* Estilos para el contenedor del calendario */
+.calendar-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente blanco */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Estilos para el encabezado del calendario */
+.calendar .header {
+    background-color: #0c5be5; /* Color de fondo verde */
+    color: #fff; /* Color del texto blanco */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.calendar .header h2 {
+    margin: 0;
+    font-size: 24px;
+    flex: 1;
+    text-align: center;
+}
+
+.calendar .month-nav button {
+    background-color: #0049bf;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para la tabla del calendario */
+#calendarTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendarTable th, #calendarTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+td.festividad {
+    background-color: #ffc107; /* Color de fondo amarillo */
+    border-radius: 50%;
+    position: relative;
+}
+
+td.festividad:hover {
+    background-color: #ffca28; /* Color de fondo amarillo más claro al pasar el mouse */
+}
+
+td.festividad:after {
+    content: '🎉'; /* Emoticono de celebración */
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td.today {
+    background-color: #081fd0; /* Color de fondo verde */
+    color: #fff; /* Color del texto blanco */
+    border-radius: 50%;
+}
+
+/* Estilos para la sección de festividades */
+.festivities {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Color de fondo gris claro */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.festivities h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333; /* Color del texto gris oscuro */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}

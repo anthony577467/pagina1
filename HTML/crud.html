@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario CRUD</title>
+    <link rel="stylesheet" href="./crud.css">
+</head>
+<body>
+    <form onsubmit="return validarFormulario();" id="formulario">
+        <label for="carrera">Nombres:</label>
+        <input type="text" name="nombre"><br>
+        <label for="nombre">Apellidos:</label>
+        <input type="text" name="apellido"><br>
+        <label for="apellidos">Correo:</label>
+        <input type="text" name="correo"><br>
+        <label for="apellidos">Asunto:</label>
+        <input type="text" name="asunto"><br>
+        <label for="apellidos">Telefono:</label>
+        <input type="text" name="telefono"><br>
+        <label for="apellidos">Nombre de estudiante:</label>
+        <input type="text" name="nombre de estudiante"><br>
+        <label for="apellidos">Apellido de estudiante:</label>
+        <input type="text" name="apellido de estudiante"><br>
+        <label for="apellidos">Seccion:</label>
+        <input type="text" name="eccion"><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Asunto</th>
+                <th>Telefono</th>
+                <th>Nombre de estudiante</th>
+                <th>Apellido de estudiante</th>
+                <th>Seccion</th>
+            </tr>
+        </thead>
+        <tbody id="tablaDatos">
+            <!-- Aquí se mostrarán los registros -->
+        </tbody>
+    </table>
+
+    <script>
+        var datos = []; // Almacena los datos en memoria
+
+        function validarFormulario() {
+            // Validación de formulario
+            var formulario = document.getElementById('formulario');
+            var formData = new FormData(formulario);
+            var nuevoRegistro = {};
+
+            formData.forEach((value, key) => {
+                nuevoRegistro[key] = value;
+            });
+
+            if (Object.values(nuevoRegistro).some(value => value === '')) {
+                alert('Por favor, complete todos los campos.');
+                return false;
+            }
+
+            datos.push(nuevoRegistro); // Agregar el nuevo registro al arreglo de datos
+            mostrarDatos();
+            formulario.reset();
+            return false;
+        }
+
+        function mostrarDatos() {
+            var tabla = document.getElementById('tablaDatos');
+            tabla.innerHTML = ''; // Limpiar la tabla antes de mostrar los datos
+
+            datos.forEach(function(registro, index) {
+                var row = tabla.insertRow();
+                Object.values(registro).forEach(function(value) {
+                    var cell = row.insertCell();
+                    cell.textContent = value;
+                });
+                var actionsCell = row.insertCell();
+                actionsCell.innerHTML = '<button onclick="eliminarRegistro(' + index + ')">Eliminar</button>';
+            });
+        }
+
+        function eliminarRegistro(index) {
+            datos.splice(index, 1);
+            mostrarDatos();
+        }
+
+        // Mostrar los datos al cargar la página
+        window.addEventListener('load', mostrarDatos);
+    </script>
+</body>
+</html>

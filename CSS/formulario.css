@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('image/2.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+form {
+    background: rgba(200, 200, 200, 0.7);
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 10px; 
+}
+
+
+/*linear-gradient(to top, rgba(98, 98, 99, 0.171) 0%, rgba(94, 92, 93, 0.151) 100%),*/
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+div img {
+    max-width: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+p {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+
+a:hover {
+    color: #004e9a;
+}
+
+#image-container {
+    float: left;
+    margin-right: 20px; 
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
