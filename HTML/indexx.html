@@ -1,0 +1,35 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+</head>
+<body>
+    <h1>Página de Inicio</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="cargarPagina('/index.html')">Inicio</a></li>
+            <li><a href="/index.html" onclick="cargarPagina('/HTML/formulario.html')">Formulario</a></li>
+            <li><a href="/HTML/formulario.html" onclick="cargarPagina('/HTML/historia.html')">Historia</a></li>
+            <li><a href="/HTML/ubicacion.html" onclick="cargarPagina('ubicanos')">Ubícanos</a></li>
+        </ul>
+    </nav>
+    
+    <div id="contenido">
+        <!-- Contenido de la página de inicio -->
+    </div>
+
+    <script>
+        function cargarPagina(paginaconectado) {
+            // Utiliza AJAX o fetch para obtener el contenido de la página sin recargar la página completa
+            fetch(`/${paginaconectado}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('contenido').innerHTML = html;
+                });
+        }
+    </script>
+</body>
+</html>

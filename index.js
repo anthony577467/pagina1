@@ -9,7 +9,7 @@ const port = 3000;
 // Configurar la conexión a la base de datos MySQL
 const conexion = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
+  user: 'anthony',
   password: 'admin',
   database: 'formulario'
 });
@@ -27,9 +27,25 @@ conexion.connect((err) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Servir archivos estáticos desde las carpetas 'public' y 'CSS'
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'CSS')));
+// Servir archivos estáticos desde las carpetas 'HTML', 'CSS', 'js', e 'img'
+app.use('/CSS', express.static(path.join(__dirname, 'CSS')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/imagenescarrucel', express.static(path.join(__dirname, 'imagenescarrucel')));
+app.use('/HTML', express.static(path.join(__dirname, 'HTML')));
+app.use('/imagenSanBenito', express.static(path.join(__dirname, 'imagenSanbenito')));
+app.use('/image', express.static(path.join(__dirname, 'image')));
+app.use('/api', express.static(path.join(__dirname, 'api')));
+app.use('/bd', express.static(path.join(__dirname, 'bd')));
+app.get("/", function (req, res) {
+    var filePath = path.join(__dirname, "./index.html");
+    res.sendFile(filePath);
+});
+
+app.get("/index.html", function (req, res) {
+    var filePath = path.join(__dirname, "./index.html");
+    res.sendFile(filePath);
+});
 
 app.post('/enviarDatos', (req, res) => {
   const {
@@ -80,7 +96,12 @@ app.post('/enviarDatos', (req, res) => {
 
 // Ruta para cargar la página principal del formulario
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/HTML/formulario.html'));
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
+
+// Ruta para cargar la página del calendario cívico
+app.get('/historia', (req, res) => {
+  res.sendFile(path.join(__dirname, '/HTML/historia.html'));
 });
 
 // Rutas para las fechas cívicas
@@ -96,3 +117,4 @@ app.get('/calendario', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor en ejecución en http://localhost:${port}`);
 });
+
