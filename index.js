@@ -11,7 +11,7 @@ const conexion = mysql.createConnection({
   host: 'localhost',
   user: 'anthony',
   password: 'admin',
-  database: 'formulario'
+  database: 'sanbenito'
 });
 
 // Conectar a la base de datos
@@ -49,38 +49,25 @@ app.get("/index.html", function (req, res) {
 
 app.post('/enviarDatos', (req, res) => {
   const {
-    carrera,
     nombre,
-    apellidos,
+    apellido,
     correo,
-    Asunto,
-    Fecha,
-    Telefono,
-    Estado,
-    nombreEstudiante,
-    apellidoEstudiante,
-    Seccion
+    telefono,
+    mensaje
   } = req.body;
-
   // Realizar la lógica para insertar datos en la base de datos
   const sql = `
     INSERT INTO formulario 
-    (carrera, nombre, apellidos, correo, Asunto, Fecha, Telefono, Estado, nombreEstudiante, apellidoEstudiante, Seccion) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `;
+    ( nombre, apellido, correo, telefono, mensaje) 
+    VALUES (?, ?, ?, ?, ?)`;
 
   const values = [
-    carrera,
+    
     nombre,
-    apellidos,
+    apellido,
     correo,
-    Asunto,
-    Fecha,
-    Telefono,
-    Estado,
-    nombreEstudiante,
-    apellidoEstudiante,
-    Seccion
+    telefono,
+    mensaje
   ];
 
   conexion.query(sql, values, (err, results) => {
@@ -93,6 +80,7 @@ app.post('/enviarDatos', (req, res) => {
     res.send('Datos enviados correctamente');
   });
 });
+
 
 // Ruta para cargar la página principal del formulario
 app.get('/', (req, res) => {

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/sb.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/HTML/form.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>contacts</title>
+</head>
+<body>
+    <!-- 
+    - #encabezado
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#">
+        <h1 class="logo">SB</h1>
+      </a>
+
+      <nav class="nav container">
+        <div class="nav__logo">
+            <h2 class="nav__title"></h2>
+        </div>
+
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+                <a href="/index.html" class="nav__links">INICIO</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/nosotrosSomos.html" class="nav__links">NOSOTROS SOMOS</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/ubicacion.html" class="nav__links">UBICACION</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/historia.html" class="nav__links">HISTORIA</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/calendario.html" class="nav__links">CALENDARIO</a>
+            </li>
+            
+
+            <li class="nav__items">
+                <a href="/HTML/form.html" class="nav__links">CONTACTANOS</a>
+            </li>
+
+            <img src="/image/close.svg" class="nav__close">
+        </ul>
+
+        <div class="nav__menu">
+            <img src="/image/menu.svg" class="nav__img">
+        </div>
+    </nav>
+
+
+
+
+    </div>
+  </header>
+
+<body>
+    <div class="contactUS">
+        <div class="title">
+            <h2>Contacta con nosotros</h2>
+        </div>
+        <div class="box">
+            <!-- Sección del formulario -->
+            <div class="contact form">
+                <h3>Envía un mensaje</h3>
+                <form action="/enviarDatos" method="POST">
+                    <div class="formBox">
+                      <div class="row50">
+                        <div class="inputBox">
+                          <span>Nombre</span>
+                          <input type="text" placeholder="nombre" name="nombre" required>
+                        </div>
+              
+                        <div class="inputBox">
+                          <span>Apellido</span>
+                          <input type="text" placeholder="apellido" name="apellido" required>
+                        </div>
+                      </div>
+              
+                      <div class="row50">
+                        <div class="inputBox">
+                          <span>Correo Electrónico</span>
+                          <input type="email" placeholder="correo@gmail.com" name="correo" required>
+                        </div>
+              
+                        <div class="inputBox">
+                          <span>Teléfono Móvil</span>
+                          <input type="tel" placeholder="+51 *** *** ***" name="telefono" required>
+                        </div>
+                      </div>
+              
+                      <div class="row100">
+                        <div class="inputBox">
+                          <span>Mensaje</span>
+                          <textarea placeholder="Escribe un mensaje..." name="mensaje"></textarea>
+                        </div>
+                      </div>
+              
+                      <div class="row100">
+                        <div class="inputBox">
+                          <input type="submit" value="Enviar">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                
+            </div>
+
+            <!-- Sección de información de contacto -->
+            <div class="contact info">
+                <h3>Información de contacto</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="pin"></ion-icon></span>
+                        <p>imperial cañete <br> Perú</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                        <a href="mailto:correo@gmail.com">correo@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <a href="tel:+51 999 999 999">+51 999 999 999</a>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sección del mapa -->
+            <div class="contact map">
+                <script src="./assets/js/formualrio.js"></script>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7773.711802967334!2d-76.3942740125584!3d-13.044842797101278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ff90b04deae51%3A0xb8ae96e559a401e6!2sSan%20Benito%2C%20Imperial!5e0!3m2!1ses!2spe!4v1699629686635!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+        </div>
+    </div>
+    <script  src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./assets/js/form.js"></script>
+</body>
+</html>
+    
+</body>
+</html>

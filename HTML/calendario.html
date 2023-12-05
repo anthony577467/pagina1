@@ -7,7 +7,7 @@
   <title>IEP san benito cañete</title>
   <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/CSS/normalizar.css">
-  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/calendario.css">
   <link rel="stylesheet" type="text/css" href="/CSS/calendar.css">
   <meta name="theme-color" content="#2091F9">
 
@@ -107,37 +107,40 @@ li strong {
 <body>
   <header class="hero">
     <nav class="nav container">
-      <div class="nav__logo">
-        <h2 class="nav__title">IEP SAN BENITO CAÑETE</h2>
-      </div>
+        <div class="nav__logo">
+            <h2 class="nav__title">IEP SAN BENITO CAÑETE</h2>
+        </div>
 
-      <ul class="nav__link nav__link--menu">
-        <li class="nav__items">
-          <a href="/index.html" class="nav__links">INICIO</a>
-        </li>
-        <li class="nav__items">
-          <a href="/HTML/nosotrosSomos.html" class="nav__links">NOSOTROS SOMOS</a>
-        </li>
-        <li class="nav__items">
-          <a href="/HTML/ubicacion.html" class="nav__links">UBICACION</a>
-        </li>
-        <li class="nav__items">
-          <a href="/HTML/historia.html" class="nav__links">HISTORIA</a>
-        </li>
-        <li class="nav__items">
-          <a href="/HTML/calendario.html" class="nav__links">CALENDARIO</a>
-        </li>
-        <li class="nav__items">
-          <a href="/HTML/formulario.html" class="nav__links">CONTACTANOS</a>
-        </li>
-        <img src="/image/close.svg" class="nav__close">
-      </ul>
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+                <a href="/index.html" class="nav__links">INICIO</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/nosotrosSomos.html" class="nav__links">NOSOTROS SOMOS</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/ubicacion.html" class="nav__links">UBICACION</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/historia.html" class="nav__links">HISTORIA</a>
+            </li>
+            <li class="nav__items">
+                <a href="/HTML/calendario.html" class="nav__links">CALENDARIO</a>
+            </li>
+            
 
-      <div class="nav__menu">
-          <img src="/image/menu.svg" class="nav__img">
-      </div>
+            <li class="nav__items">
+                <a href="/HTML/form.html" class="nav__links">CONTACTANOS</a>
+            </li>
+
+            <img src="/image/close.svg" class="nav__close">
+        </ul>
+
+        <div class="nav__menu">
+            <img src="/image/menu.svg" class="nav__img">
+        </div>
     </nav>
-  </header>
+</header>
 
   <div class="contenedor">
     <!-- Imagen 1 -->
@@ -157,26 +160,8 @@ li strong {
   </div>
 
   <script>
-    async function cargarFechasCivicasHoy() {
-      const response = await fetch('/api/fechas-civicas-hoy');
-      const fechas = await response.json();
-
-      const fechasLista = document.getElementById('fechas-lista');
-      fechasLista.innerHTML = '<h2>Fechas Cívicas de Hoy</h2>';
-
-      if (fechas.length === 0) {
-        fechasLista.innerHTML += '<p>No hay fechas cívicas para hoy.</p>';
-      } else {
-        fechasLista.innerHTML += '<ul>';
-        fechas.forEach((fecha) => {
-          fechasLista.innerHTML += `<li>${fecha.namecal} - ${fecha.desccal} - ${fecha.datecal}</li>`;
-        });
-        fechasLista.innerHTML += '</ul>';
-      }
-    }
-
-    cargarFechasCivicasHoy();
+  
   </script>
 </body>
-
+<script src="/js/calendario.js"></script>
 </html>

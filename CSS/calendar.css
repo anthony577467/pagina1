@@ -5,7 +5,11 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    /* Otros estilos para tu contenedor principal */
+  }
   h1 {
     color: #008080;
   }
@@ -33,4 +37,15 @@ body {
     font-weight: bold;
     color: #ff6347; /* Rojo coral */
   }
-  
+  @media only screen and (max-width: 1024px) {
+    .container {
+      width: 90%;
+      /* Otros estilos específicos para tablets */
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+      /* Otros estilos específicos para celulares */
+    }
+  }

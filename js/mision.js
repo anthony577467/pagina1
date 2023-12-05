@@ -1,34 +1,20 @@
-// Obtén todos los elementos "VER MAS" dentro del segundo "price__element"
-const verMasButtonsMision = document.querySelectorAll(".price__element--best .price__cta.ver-mas");
+// Obtén todas las flechas de preguntas
+const arrowIcons = document.querySelectorAll(".questions__arrow");
 
-// Itera a través de los botones "VER MAS" dentro del segundo "price__element"
-verMasButtonsMision.forEach((button) => {
-    button.addEventListener("click", (event) => {
-        // Evita el comportamiento predeterminado del enlace
-        event.preventDefault();
+// Itera a través de las flechas
+arrowIcons.forEach((arrowIcon) => {
+    arrowIcon.addEventListener("click", () => {
+        // Encuentra el elemento "questions__show" más cercano a la flecha actual
+        const showContent = arrowIcon.closest(".questions__answer").querySelector(".questions__show");
 
-        // Encuentra el elemento "hidden-content" más cercano al botón actual
-        const hiddenContent = button.nextElementSibling;
-
-        // Encuentra el "price__element" que contiene el botón
-        const priceElement = button.closest(".price__element--best");
-
-        // Encuentra todos los elementos "hidden-content" en otros "price__element--best"
-        const otherHiddenContents = document.querySelectorAll(".price__element--best .hidden-content");
-
-        // Oculta todos los otros elementos "hidden-content" en el segundo "price__element--best"
-        otherHiddenContents.forEach((otherHiddenContent) => {
-            otherHiddenContent.style.display = "none";
-        });
-
-        // Si el contenido oculto actual está oculto, muéstralo y oculta el botón "VER MAS"
-        if (hiddenContent.style.display === "none") {
-            hiddenContent.style.display = "block";
-            button.style.display = "none";
+        // Si el contenido está oculto, muéstralo y rota la flecha hacia abajo
+        if (showContent.style.display === "none" || !showContent.style.display) {
+            showContent.style.display = "block";
+            arrowIcon.style.transform = "rotate(180deg)";
         } else {
-            // Si el contenido oculto actual está visible, ocúltalo y muestra el botón "VER MAS"
-            hiddenContent.style.display = "none";
-            button.style.display = "inline";
+            // Si el contenido está visible, ocúltalo y rota la flecha hacia arriba
+            showContent.style.display = "none";
+            arrowIcon.style.transform = "rotate(0deg)";
         }
     });
 });

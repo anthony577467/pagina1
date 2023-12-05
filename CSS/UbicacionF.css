@@ -139,7 +139,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background: url('/imagenescarrucel/fondoF.png') center center no-repeat fixed;
+    background: linear-gradient(135deg, transparent 0%, blue 50%, blue 100%);
     background-size: cover;
     background-position: 20% center; /* Ajusta el valor para mover a la derecha */
 }

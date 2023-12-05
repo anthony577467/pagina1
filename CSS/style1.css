@@ -5,6 +5,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
+   
+   
+        
+    color: black;
+        
+
     padding: 0;
     height: 100vh;
     overflow: auto; /* Habilita el desplazamiento vertical */
@@ -31,7 +37,7 @@ h1 {
 /* Estilos para el encabezado del calendario */
 .calendar .header {
     background-color: #0c5be5; /* Color de fondo verde */
-    color: #fff; /* Color del texto blanco */
+    color: black;/* Color del texto blanco */
     padding: 10px;
     display: flex;
     align-items: center;
@@ -46,7 +52,7 @@ h1 {
 
 .calendar .month-nav button {
     background-color: #0049bf;
-    color: #fff;
+    color: black;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -85,12 +91,13 @@ td.festividad:after {
 
 td.today {
     background-color: #081fd0; /* Color de fondo verde */
-    color: #fff; /* Color del texto blanco */
+    color: black;/* Color del texto blanco */
     border-radius: 50%;
 }
 
 /* Estilos para la sección de festividades */
 .festivities {
+    color: black;
     text-align: center;
     margin-top: 20px;
     padding: 20px;
@@ -100,15 +107,20 @@ td.today {
 }
 
 .festivities h3 {
+    color: black;
     margin-top: 0;
     font-size: 20px;
-    color: #333; /* Color del texto gris oscuro */
+    color: black; /* Color del texto gris oscuro */
 }
 
 .container {
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 800px;
     margin: auto;
+}
+body {
+    color: black;
 }

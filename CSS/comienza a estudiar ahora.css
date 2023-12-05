@@ -110,7 +110,38 @@ video {
 }
 
 
+  /* Estilos generales para pantallas grandes (PC) */
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Otros estilos generales */
+  }
   
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    /* Otros estilos para tu contenedor principal */
+  }
+  
+  /* Media query para tablets */
+  
+  @media only screen and (max-width: 1024px) {
+    .container {
+      width: 90%;
+      /* Otros estilos específicos para tablets */
+    }
+  }
+  
+  /* Media query para pantallas pequeñas (celulares) */
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+      /* Otros estilos específicos para celulares */
+    }
+  }
+  
+  /* Otras media queries según sea necesario para adaptarse a diferentes tamaños de pantalla */
   
   
 

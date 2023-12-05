@@ -7,6 +7,10 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    
+     color: black;
+    
+    
 }
 
 .container {
@@ -25,7 +29,7 @@ body {
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
-    color: #ffffff;
+    color: black;
 }
 
 .hero::before {
@@ -34,12 +38,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;/*index*/
-    background-image: url('/imagenSanBenito/portadaSB.jpg'), linear-gradient(180deg, #6d06068c 0%, #0000008c 100%);
-    background-size: cover; /* Hace que la imagen de fondo sea responsive */
+    height: 100%;
+    background-image: url('/imagenescarrucel/portadaSB.jpg'), linear-gradient(180deg, #6d06068c 0%, #0000008c 100%);
+    background-size: cover;
+    background-position: center; /* Centra la imagen de fondo */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
     z-index: -1;
-}
+  }
+  
 
 .hero2 {
     width: 100%;
@@ -49,7 +55,7 @@ body {
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
-    color: #fff;
+    color: black;
 }
 .hero2::before {
     content: "";
@@ -96,7 +102,7 @@ body {
 }
 
 .nav__links {
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -192,23 +198,23 @@ body {
 /* palabras del director */
 
 .knowledge {
-    background-image: url('/imagenescarrucel/fondoF.png'); /* Reemplaza con la URL de tu imagen de fondo */
+    background-color: #ffffff; /* Cambia el color de fondo a un azul cálido, puedes ajustar el código de color según tus preferencias */
     
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay; /* Esto puede ayudar a combinar la imagen con el color de fondo */
-    position: relative; /* Agrega posición relativa para que los elementos internos se posicionen correctamente */
-    overflow: hidden; /* Asegúrate de que el contenido no sobresalga del contenedor */
+    position: relative;
+    overflow: hidden;
 }
+
 .knowledge {
-    background-image: url('/imagenescarrucel/fondoF.png'); /* Reemplaza con la URL de tu imagen de fondo */
+    background-color: #ffffff; /* Cambia el color de fondo a un azul cálido, puedes ajustar el código de color según tus preferencias */
     
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay; /* Esto puede ayudar a combinar la imagen con el color de fondo */
-    position: relative; /* Agrega posición relativa para que los elementos internos se posicionen correctamente */
-    overflow: hidden; /* Asegúrate de que el contenido no sobresalga del contenedor */
+    position: relative;
+    overflow: hidden;
 }
+
 .knowledge::before {
     content: "";
     position: absolute;
@@ -318,7 +324,7 @@ body {
 /* profesores carrucel */
 
 .testimony{
-    background-color: #e5e5f7;
+    background-color: #ffffff;
 }
 
 .testimony__container{
@@ -361,7 +367,7 @@ body {
 
 .testimony__course{
     background-color: royalblue;
-    color: #fff;
+    color: rgb(255, 255, 255);
     display: inline-block;
     padding: 5px;
 }
@@ -456,7 +462,7 @@ body {
 }
 
 .footer__title, .footer__newsletter{
-    color: #fff;
+    color: black;
 }
 
 
@@ -509,7 +515,7 @@ body {
     background-color: #2091F9;
     border: none;
     font-size: 1rem;
-    color: #fff;
+    color: black;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -517,7 +523,7 @@ body {
 .footer__copy{
     --padding-container: 30px 0;
     text-align: center;
-    color: #fff;
+    color: black;
 }
 
 .footer__copyright{
@@ -729,7 +735,7 @@ body {
 }
 /* Añadir una imagen de fondo a toda la página */
 body {
-    background-image: url('./image/img/fondoF.png'); 
+    background-color: #ffffff;
     background-size: cover; 
     background-repeat: no-repeat; 
 }
@@ -738,26 +744,26 @@ body {
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
-    color: #fff;
+    color: black;
 }
 
 .article-title {
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
-    color: #fff;
+    color: black;
 }
 /* Aplicar estilos a donde se encuentra */
 .container.about h1 {
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
-    color: #fff;
+    color: black;
 }
 /*iep san benito*/
 p {
     font-size: 40px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-style: italic;
 }
@@ -769,7 +775,7 @@ p.fa {
 
 .table-cell p {
     font-size: 16px;
-    color: white;
+    color: black;
 
 }
 /*centrar texto */
@@ -799,13 +805,19 @@ p.fa {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/imagenescarrucel/fondoF.png'), linear-gradient(180deg, #6d06068c 0%, #0000008c 100%);
+    background-color: #ffffff;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
     z-index: -1;
 }
 
-
+body {
+    font-family: 'Poppins', sans-serif;
+    
+     color: black;
+    
+    
+}
 
 
 

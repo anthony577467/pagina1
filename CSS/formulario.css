@@ -4,7 +4,23 @@ body {
     background-size: cover;
     position: relative;
 }
-
+.container {
+    width: 80%;
+    margin: 0 auto;
+    /* Otros estilos para tu contenedor principal */
+  }
+  @media only screen and (max-width: 1024px) {
+    .container {
+      width: 90%;
+      /* Otros estilos específicos para tablets */
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+      /* Otros estilos específicos para celulares */
+    }
+  }
 form {
     background: rgba(200, 200, 200, 0.7);
     width: 400px;
