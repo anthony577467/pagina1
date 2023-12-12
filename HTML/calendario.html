@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IEP san benito cañete</title>
   <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/CSS/normalizar.css">
+
   <link rel="stylesheet" href="/CSS/calendario.css">
   <link rel="stylesheet" type="text/css" href="/CSS/calendar.css">
   <meta name="theme-color" content="#2091F9">
@@ -27,7 +27,7 @@
 </head>
 <DIV>
 </DIV>
-<h1>Calendario Cívico</h1>
+<h1></h1>
 <style>
 body {
     font-family: 'Arial', sans-serif;
@@ -105,11 +105,11 @@ li strong {
 </style>
 
 <body>
-  <header class="hero">
+  <header class="hero5">
     <nav class="nav container">
         <div class="nav__logo">
-            <h2 class="nav__title">IEP SAN BENITO CAÑETE</h2>
-        </div>
+            <h2 class="nav__title"></h2>
+        </div> 
 
         <ul class="nav__link nav__link--menu">
             <li class="nav__items">
@@ -160,8 +160,32 @@ li strong {
   </div>
 
   <script>
-  
+    async function cargarFechasCivicasHoy() {
+      const response = await fetch('/api/fechas-civicas-hoy');
+      const fechas = await response.json();
+
+      const fechasLista = document.getElementById('fechas-lista');
+      fechasLista.innerHTML = '<h2>Fechas Cívicas de Hoy</h2>';
+
+      if (fechas.length === 0) {
+        fechasLista.innerHTML += '<p>No hay fechas cívicas para hoy.</p>';
+      } else {
+        fechasLista.innerHTML += '<ul>';
+        fechas.forEach((fecha) => {
+          fechasLista.innerHTML += `<li>${fecha.namecal} - ${fecha.desccal} - ${fecha.datecal}</li>`;
+        });
+
+        fechasLista.innerHTML += '</ul>';
+      }
+    }
+
+    cargarFechasCivicasHoy();
   </script>
+  <script src="/js/menu.js"></script>
+
+  <script src="/js/calendario.js"></script>
 </body>
-<script src="/js/calendario.js"></script>
+
+
+
 </html>

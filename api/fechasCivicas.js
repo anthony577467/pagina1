@@ -9,13 +9,11 @@ router.get('/fechas-civicas-hoy', (req, res) => {
   connection.query('SELECT * FROM calendario WHERE DATE(datecal) = CURDATE()', (err, results) => {
     if (err) {
       console.error('Error al obtener las fechas cívicas de hoy:', err);
-      res.status(500).send('Error del servidor');
+      res.status(500).json({ error: 'Error del servidor' });
     } else {
       res.json(results);
     }
   });
 });
 
-
 module.exports = router;
-

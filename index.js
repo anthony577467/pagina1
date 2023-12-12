@@ -9,9 +9,9 @@ const port = 3000;
 // Configurar la conexión a la base de datos MySQL
 const conexion = mysql.createConnection({
   host: 'localhost',
-  user: 'anthony',
+  user: 'root',
   password: 'admin',
-  database: 'sanbenito'
+  database: 'sbsb'
 });
 
 // Conectar a la base de datos
@@ -100,6 +100,7 @@ app.use('/api', fechasCivicasRoutes);
 app.get('/calendario', (req, res) => {
   res.sendFile(path.join(__dirname, '/HTML/calendario.html'));
 });
+
 
 // Iniciar el servidor
 app.listen(port, () => {

@@ -2,9 +2,9 @@ const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
   host: 'localhost', // Cambia esto según tu configuración de MySQL
-  user: 'anthony',
+  user: 'root',
   password: 'admin',
-  database: 'sanbenito',
+  database: 'calendar',
 });
 
 connection.connect((err) => {
@@ -14,6 +14,5 @@ connection.connect((err) => {
     console.log('Conexión exitosa a la base de datos');
   }
 });
-
 
 module.exports = connection;
